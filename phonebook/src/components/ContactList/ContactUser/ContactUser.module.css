@@ -1,0 +1,25 @@
+.contactItem {
+  text-align: center;
+  margin: 15px 0 15px;
+  list-style-type: none;
+}
+.name {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.phone {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.btnDelete {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px;
+  border: solid black;
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+  border-radius: 15px;
+}
