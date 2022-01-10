@@ -13,6 +13,27 @@ class App extends Component {
     contacts: contacts,
     filter: "",
   };
+   componentDidMount() {
+    
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
+
+    if (parsedContacts) {
+      
+      this.setState({ contacts: parsedContacts });
+    }
+  }
+  componentDidUpdate(prevProps, prevState) {
+    const nextContacts = this.state.contacts;
+    const prevContacts = prevState.contacts;
+
+    if (nextContacts !== prevContacts) {
+
+      localStorage.setItem('contacts', JSON.stringify(nextContacts));
+    }
+
+    
+  }
 
   formSubmitHandler = ({ name, number }) => {
     const { contacts } = this.state;
